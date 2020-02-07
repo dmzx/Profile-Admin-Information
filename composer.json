@@ -1,0 +1,41 @@
+{
+	"name": "dmzx/profileadmininfo",
+	"type": "phpbb-extension",
+	"description": "Profile Admin Information, information required for fast support. Admins or Moderator can only see this information on profile page of member.",
+	"homepage": "https://www.dmzx-web.net",
+	"version": "1.0.0",
+	"time": "2020-02-06",
+	"keywords": [
+		"phpbb",
+		"extension",
+		"profileadmininfo"
+	],
+	"license": "GPL-2.0-only",
+	"authors": [
+		{
+			"name": "dmzx",
+			"homepage": "https://www.dmzx-web.net",
+			"email": "info@dmzx-web.net",
+			"role": "Extension Developer"
+		}
+	],
+	"require": {
+		"php": ">=5.4",
+		"composer/installers": "~1.0.0"
+	},
+	"require-dev": {
+		"phpbb/epv": "dev-master"
+	},
+	"extra": {
+		"display-name": "Profile Admin Information",
+		"soft-require": {
+			"phpbb/phpbb": ">=3.3.0<4.4.0@dev"
+		},
+		"version-check": {
+			"host": "www.dmzx-web.net",
+			"directory": "/versions",
+			"filename": "profileadmininfo_version.json",
+			"ssl": true
+		}
+	}
+}
