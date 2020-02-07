@@ -37,6 +37,10 @@ branches:
     - dev
     - /^\d+(\.\d+)?\.x$/
 
+services:
+  - postgresql
+  - mysql
+  
 before_install:
   - sudo mkdir travis
   - git clone "https://github.com/nickvergessen/phpbb-ext-acme-demo.git"
@@ -49,10 +53,10 @@ install:
   - travis/prepare-phpbb.sh $EXTNAME $PHPBB_BRANCH
   - cd ../../phpBB3
   - travis/prepare-extension.sh $EXTNAME $PHPBB_BRANCH
-  - travis/setup-phpbb.sh $DB $TRAVIS_PHP_VERSION
+  - travis/setup-phpbb.sh $DB $TRAVIS_PHP_VERSION $NOTESTS
 
 before_script:
-  - travis/setup-database.sh $DB $TRAVIS_PHP_VERSION
+  - travis/setup-database.sh $DB $TRAVIS_PHP_VERSION $NOTESTS
 
 script:
   - sh -c "if [ '$SNIFF' != '0' ]; then travis/ext-sniff.sh $DB $TRAVIS_PHP_VERSION $EXTNAME; fi"
