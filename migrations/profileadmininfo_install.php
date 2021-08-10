@@ -28,7 +28,9 @@ class profileadmininfo_install extends profilefield_base_migration
 
 	public static function depends_on()
 	{
-		return ['\phpbb\db\migration\data\v320\v320'];
+		return [
+			'\phpbb\db\migration\data\v330\v330'
+		];
 	}
 
 	public function update_data()
