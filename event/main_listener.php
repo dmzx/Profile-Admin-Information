@@ -38,10 +38,10 @@ class main_listener implements EventSubscriberInterface
 
 	public static function getSubscribedEvents()
 	{
-		return array(
+		return [
 			'core.user_setup'							=> 'load_language_on_setup',
 			'core.memberlist_prepare_profile_data'		=> 'posting_modify_template_vars',
-		);
+		];
 	}
 
 	public function load_language_on_setup($event)
