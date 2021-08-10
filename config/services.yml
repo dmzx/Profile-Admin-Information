@@ -1,12 +1,12 @@
 services:
     dmzx.profileadmininfo.listener:
-        class: dmzx\profileadmininfo\event\main_listener
+        class: 'dmzx\profileadmininfo\event\main_listener'
         arguments:
             - '@dmzx.profileadmininfo.profileadmininfo'
             - '@template'
         tags:
-            - { name: event.listener }
+            - { name: 'event.listener' }
     dmzx.profileadmininfo.profileadmininfo:
-        class: dmzx\profileadmininfo\core\profileadmininfo
+        class: 'dmzx\profileadmininfo\core\profileadmininfo'
         arguments:
             - '@profilefields.manager'
