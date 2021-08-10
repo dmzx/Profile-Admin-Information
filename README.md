@@ -1,5 +1,7 @@
 # phpBB Profile Admin Information Extension
 
+[![Build Status](https://github.com/dmzx/Profile-Admin-Information/workflows/Tests/badge.svg)](https://github.com/phpbb-extensions/dmzx/Profile-Admin-Information)
+
 ## Install
 
 1. Download the latest release.
