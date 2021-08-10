@@ -77,7 +77,7 @@ class profileadmininfo_install extends profilefield_base_migration
 		$this->db->sql_freeresult($result);
 
 		$sql_ary = array_merge($this->profilefield_data, [
-			'field_order'			=> $max_field_order + 1,
+			'field_order' => $max_field_order + 1,
 		]);
 
 		$sql = 'INSERT INTO ' . PROFILE_FIELDS_TABLE . ' ' . $this->db->sql_build_array('INSERT', $sql_ary);
