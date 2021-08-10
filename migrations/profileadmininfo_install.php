@@ -9,7 +9,10 @@
 
 namespace dmzx\profileadmininfo\migrations;
 
-class profileadmininfo_install extends \phpbb\db\migration\profilefield_base_migration
+use phpbb\db\migration\profilefield_base_migration;
+use phpbb\db\sql_insert_buffer;
+
+class profileadmininfo_install extends profilefield_base_migration
 {
 	public function effectively_installed()
 	{
@@ -79,7 +82,7 @@ class profileadmininfo_install extends \phpbb\db\migration\profilefield_base_mig
 		$this->db->sql_query($sql);
 		$field_id = (int) $this->db->sql_nextid();
 
-		$insert_buffer = new \phpbb\db\sql_insert_buffer($this->db, PROFILE_LANG_TABLE);
+		$insert_buffer = new sql_insert_buffer($this->db, PROFILE_LANG_TABLE);
 
 		$sql = 'SELECT lang_id
 			FROM ' . LANG_TABLE;
