@@ -1,0 +1,8 @@
+{% for profileadmininfo in loops.profileadmininfo %}
+{% if profileadmininfo.PROFILEADMININFO_INFO && U_ACP %}
+<hr>
+<li class="text-center alert alert-info">
+	<strong>{{ lang('PROFILEADMININFO_PROVIDED') }}</strong>
+</li>
+{% endif %}
+{% endfor %}
